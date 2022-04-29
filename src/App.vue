@@ -10,7 +10,6 @@
           transition="scale-transition"
           width="40"
         />
-
         <v-img
           alt="Vuetify Name"
           class="shrink mt-1 hidden-sm-and-down"
@@ -20,9 +19,7 @@
           width="100"
         />
       </div>
-
       <v-spacer></v-spacer>
-
       <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
         target="_blank"
@@ -31,9 +28,8 @@
         <span class="mr-2">Latest Release</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
-      <v-btn elevation="2" x-large>Button</v-btn>
+      <v-btn elevation="2" x-large href="about">Button</v-btn>
     </v-app-bar>
-
     <v-main>
       <router-view />
     </v-main>
