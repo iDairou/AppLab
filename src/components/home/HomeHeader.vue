@@ -10,19 +10,18 @@
             />
             #1 Editiors Choice App of 2020</span
           >
-
           <h1>Best app for your modern lifestyle</h1>
           <p class="lower-text">
             Increase productivity with a simple to-do app. App for managing your
             personal budgets.
           </p>
-          <v-btn
-            color="#2500f9"
-            class="white--text mr-4 font-weight-bold"
-            rounded
-            >Try for free</v-btn
+          <button-test bg-color="primary"></button-test>
+          <button-test
+            bg-color="#fff"
+            btn-class="primary--text pr-8 pl-8"
+            class="watch-demo"
+            >Watch demo video</button-test
           >
-          <v-btn rounded class="pr-8 pl-8">Watch demo video</v-btn>
         </div>
         <div class="col-6">
           <v-img
@@ -36,11 +35,11 @@
 </template>
 
 <script>
+import ButtonTest from "../shared/SharedButton.vue";
+
 export default {
-  data() {
-    return {
-      text: "test",
-    };
+  components: {
+    ButtonTest,
   },
 };
 </script>
@@ -60,11 +59,18 @@ export default {
 }
 
 .container {
+  width: 100%;
   max-width: 1070px;
+  margin: auto;
 
   .row {
     justify-content: space-between;
     align-items: center;
+    .watch-demo:hover {
+      color: #fff !important;
+      background-color: $primary !important;
+    }
+
     .upper-text {
       position: relative;
       font-size: 14px;
@@ -92,24 +98,7 @@ export default {
       font-size: 18px;
       margin-top: 20px;
       color: $descColor;
-    }
-
-    .v-btn {
-      font-size: 16px;
-      min-width: 170px;
-      height: 57px;
-      background: #fff;
-      color: $primary;
-      text-transform: none;
-      letter-spacing: 0px;
-      transition: background-color 0.3s;
-      margin-top: 18.5px;
-      box-shadow: none;
-
-      &:hover {
-        color: #fff;
-        background-color: $primary;
-      }
+      margin-bottom: 34px;
     }
   }
 }
