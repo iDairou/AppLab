@@ -1,4 +1,4 @@
-# startup-app
+# startup
 
 ## Project setup
 ```
