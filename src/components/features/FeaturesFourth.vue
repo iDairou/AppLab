@@ -39,6 +39,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+  margin-bottom: 70px;
   .designed-box-desc {
     width: 35%;
     margin-left: 100px;

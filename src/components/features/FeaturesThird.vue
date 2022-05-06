@@ -13,56 +13,22 @@
           </p>
         </div>
         <div class="box-desc">
-          <div class="box-icon">
-            <div class="box-icon-img">
-              <img
-                src="..\src\assets\images\2_awesome-apps-features\logo_03.png"
-                alt="First Icon"
-              />
-            </div>
-            <div class="box-icon-desc">
-              <h4>Fast Performance</h4>
-              <p>
-                Get your blood tests delivered at home collect a sample the news
-                your blood tests
-              </p>
-            </div>
-          </div>
-          <div class="box-icon">
-            <div class="box-icon-img">
-              <img
-                src="..\src\assets\images\2_awesome-apps-features\logo_06.png"
-                alt="First Icon"
-              />
-            </div>
-            <div class="box-icon-desc">
-              <h4>Prototyping</h4>
-              <p>
-                Get your blood tests delivered at home collect a sample the news
-                your blood tests
-              </p>
-            </div>
-          </div>
-          <div class="box-icon">
-            <div class="box-icon-img">
-              <img
-                src="..\src\assets\images\2_awesome-apps-features\logo_08.png"
-                alt="First Icon"
-              />
-            </div>
-            <div class="box-icon-desc">
-              <h4>Vector Editing</h4>
-              <p>
-                Get your blood tests delivered at home collect a sample the news
-                your blood tests
-              </p>
-            </div>
-          </div>
+          <shared-icon-box></shared-icon-box>
+          <shared-icon-box></shared-icon-box>
+          <shared-icon-box></shared-icon-box>
         </div>
-      </div>
-    </v-row></v-container
-  >
+      </div> </v-row
+  ></v-container>
 </template>
+
+<script>
+import SharedIconBox from "../shared/SharedIconBox.vue";
+export default {
+  components: {
+    SharedIconBox,
+  },
+};
+</script>
 
 <style scoped lang="scss">
 .smart-box {
@@ -79,8 +45,11 @@
     margin-top: 100px;
     .box-icon {
       width: 30%;
-      img {
-        margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .box-icon-img {
+        align-self: start;
       }
       .box-icon-desc {
         h4 {

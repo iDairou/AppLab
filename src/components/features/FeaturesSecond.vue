@@ -45,29 +45,32 @@
               </p>
             </div>
           </div>
-          <div class="box-icon">
-            <div class="box-icon-img">
-              <img
-                src="..\src\assets\images\2_awesome-apps-features\logo_08.png"
-                alt="First Icon"
-              />
-            </div>
-            <div class="box-icon-desc">
-              <h4>Vector Editing</h4>
-              <p>
-                Get your blood tests delivered at home collect a sample the news
-                your blood tests
-              </p>
-            </div>
-          </div>
+          <shared-icon-box color="$redIcon"
+            >TEST
+            <template v-slot:paragraph>
+              Get your blood tests delivered at home collect a sample the news
+              your blood tests TEST
+            </template>
+          </shared-icon-box>
         </div>
       </div></v-row
     ></v-container
   >
 </template>
 
+<script>
+import SharedIconBox from "../shared/SharedIconBox.vue";
+
+export default {
+  components: {
+    SharedIconBox,
+  },
+};
+</script>
+
 <style scoped lang="scss">
 @import "@/styles/mixins";
+@import "@/styles/variables";
 .features-box {
   display: flex;
   max-width: 1200px;
@@ -99,7 +102,6 @@
     .box-icon {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       margin-bottom: 30px;
       h4 {
         margin-bottom: 5px;

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="border">
     <features-first></features-first>
     <features-second></features-second>
     <features-third></features-third>
@@ -21,3 +21,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.border {
+  border-bottom: 1px solid #f4f4f4;
+}
+</style>
