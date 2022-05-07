@@ -13,12 +13,38 @@
           </p>
         </div>
         <div class="box-desc">
-          <shared-icon-box></shared-icon-box>
-          <shared-icon-box></shared-icon-box>
-          <shared-icon-box></shared-icon-box>
+          <shared-icon-box img="2_awesome-apps-features/Home-page-test_12.png"
+            >Vector Editing
+            <template v-slot:paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              pellentesque dolor vitae tellus vehicula, vel ornare magna
+              sollicitudin.
+            </template>
+          </shared-icon-box>
+          <shared-icon-box
+            img="2_awesome-apps-features/Home-page-test_09.png"
+            class="box-icon--blue"
+            >Vector Editing
+            <template v-slot:paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              pellentesque dolor vitae tellus vehicula, vel ornare magna
+              sollicitudin.
+            </template>
+          </shared-icon-box>
+          <shared-icon-box
+            img="2_awesome-apps-features/Home-page-test_15.png"
+            class="box-icon--green"
+            >Vector Editing
+            <template v-slot:paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              pellentesque dolor vitae tellus vehicula, vel ornare magna
+              sollicitudin.
+            </template>
+          </shared-icon-box>
         </div>
-      </div> </v-row
-  ></v-container>
+      </div>
+    </v-row></v-container
+  >
 </template>
 
 <script>
@@ -40,21 +66,22 @@ export default {
   align-items: center;
   .box-desc {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-top: 100px;
     .box-icon {
-      width: 30%;
+      width: 25%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      .box-icon-img {
-        align-self: start;
-      }
+
       .box-icon-desc {
         h4 {
           margin-bottom: 10px;
         }
+      }
+      .box-icon__img {
+        align-self: start;
       }
     }
   }

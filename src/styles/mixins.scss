@@ -22,3 +22,8 @@
   width: $width;
   height: $height;
 }
+
+@mixin set-margin-padding($margin, $padding) {
+  margin: $margin;
+  padding: $padding;
+}

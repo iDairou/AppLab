@@ -15,41 +15,26 @@
             Increase productivity with a simple to-do app. App for managing your
             personal budgets.
           </p>
-          <div class="box-icon">
-            <div class="box-icon-img">
-              <img
-                src="..\src\assets\images\2_awesome-apps-features\logo_03.png"
-                alt="First Icon"
-              />
-            </div>
-            <div class="box-icon-desc">
-              <h4>Fast Performance</h4>
-              <p>
-                Get your blood tests delivered at home collect a sample the news
-                your blood tests
-              </p>
-            </div>
-          </div>
-          <div class="box-icon">
-            <div class="box-icon-img">
-              <img
-                src="..\src\assets\images\2_awesome-apps-features\logo_06.png"
-                alt="First Icon"
-              />
-            </div>
-            <div class="box-icon-desc">
-              <h4>Prototyping</h4>
-              <p>
-                Get your blood tests delivered at home collect a sample the news
-                your blood tests
-              </p>
-            </div>
-          </div>
-          <shared-icon-box color="$redIcon"
-            >TEST
+          <shared-icon-box
+            img="2_awesome-apps-features/logo_03.png"
+          ></shared-icon-box>
+          <shared-icon-box
+            img="2_awesome-apps-features/logo_06.png"
+            boxClass="box-icon--blue"
+            >Prototyping
             <template v-slot:paragraph>
-              Get your blood tests delivered at home collect a sample the news
-              your blood tests TEST
+              Ut sodales, elit blandit gravida dapibus, enim neque interdum
+              massa, sit amet luctus quam velit at augue.
+            </template>
+          </shared-icon-box>
+          <shared-icon-box
+            img="2_awesome-apps-features/logo_08.png"
+            boxClass="box-icon--green"
+            >Vector Editing
+            <template v-slot:paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              pellentesque dolor vitae tellus vehicula, vel ornare magna
+              sollicitudin.
             </template>
           </shared-icon-box>
         </div>
@@ -105,12 +90,6 @@ export default {
       margin-bottom: 30px;
       h4 {
         margin-bottom: 5px;
-      }
-      .box-icon-img {
-        margin-right: 30px;
-        background-color: #ffecef;
-        border-radius: 50%;
-        padding: 15px 15px 10px 15px;
       }
     }
   }
