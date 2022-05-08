@@ -1,10 +1,14 @@
 <template>
   <v-container
     ><v-row>
-      <span>Montly</span>
-      <input type="checkbox" id="toggle" class="toggle" />
-      <label for="toggle"></label>
-      <span>Annually</span>
+      <div class="toogle-box">
+        <span>Montly </span>
+        <button-test @changeContent="changeContent" bgColor="primary"
+          >Change</button-test
+        >
+        <span>Annually</span>
+      </div>
+
       <div class="cards">
         <div class="price-card">
           <div class="upper">
@@ -24,7 +28,9 @@
         </div>
         <div class="price-card">
           <div class="upper">
-            <p class="price">$0<span>/month</span></p>
+            <p class="price">
+              {{ price }}<span>{{ month }}</span>
+            </p>
             <h4>Business Class</h4>
             <p>For small teams or office</p>
           </div>
@@ -55,6 +61,18 @@ export default {
   components: {
     ButtonTest,
   },
+  data() {
+    return {
+      price: "$99",
+      month: "/month",
+    };
+  },
+  methods: {
+    changeContent() {
+      this.price = "$960";
+      this.month = "/year";
+    },
+  },
 };
 </script>
 
@@ -62,7 +80,12 @@ export default {
 @import "@/styles/mixins";
 
 .row {
+  align-items: center;
+  margin: 0 auto;
   height: 50vh;
+  .toogle-box {
+    margin: 0 auto;
+  }
 
   .cards {
     width: 100%;

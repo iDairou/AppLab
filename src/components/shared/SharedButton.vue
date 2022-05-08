@@ -3,6 +3,7 @@
     class="v-btn--round default-btn mr-4 font-weight-bold"
     :class="btnClass"
     :color="bgColor"
+    @click="changeContent"
     rounded
     ><slot>Try for free</slot></v-btn
   >
@@ -12,6 +13,11 @@ export default {
   props: {
     btnClass: String,
     bgColor: String,
+  },
+  methods: {
+    changeContent() {
+      this.$emit("changeContent");
+    },
   },
 };
 </script>
