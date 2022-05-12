@@ -3,7 +3,7 @@
     class="v-btn--round default-btn mr-4 font-weight-bold"
     :class="btnClass"
     :color="bgColor"
-    @click="changeContent"
+    @click="emit"
     rounded
     ><slot>Try for free</slot></v-btn
   >
@@ -15,8 +15,8 @@ export default {
     bgColor: String,
   },
   methods: {
-    changeContent() {
-      this.$emit("changeContent");
+    emit() {
+      this.$emit("emit");
     },
   },
 };

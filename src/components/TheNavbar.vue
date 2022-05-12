@@ -1,20 +1,21 @@
 <template>
-  <div class="position-container">
-    <v-toolbar flat app max-height="150"
-      ><v-toolbar-title class="font-weight-bold">
-        <span class="app-color">App</span><span>Lab</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <ul class="nav-items">
-        <a href="#">Home</a>
-        <a href="#">Key Features</a>
-        <a href="#">Pricing</a>
-        <a href="#">Testiminial</a>
-        <a href="#">FAQ</a>
-        <button-test bg-color="primary"></button-test>
-      </ul>
-    </v-toolbar>
-  </div>
+  <v-app-bar>
+    <div class="position-container">
+      <v-toolbar flat app max-height="150"
+        ><v-toolbar-title class="font-weight-bold">
+          <span class="app-color">App</span><span>Lab</span>
+        </v-toolbar-title>
+        <v-spacer></v-spacer>
+        <ul class="nav-items">
+          <a href="#">Home</a>
+          <a href="#">Key Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Testiminial</a>
+          <a href="#">FAQ</a>
+          <button-test bg-color="primary"></button-test>
+        </ul>
+      </v-toolbar></div
+  ></v-app-bar>
 </template>
 
 <script>

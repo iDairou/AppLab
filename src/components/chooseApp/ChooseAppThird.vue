@@ -2,11 +2,14 @@
   <v-container
     ><v-row>
       <div class="toogle-box">
-        <span>Montly </span>
-        <button-test @changeContent="changeContent" bgColor="primary"
-          >Change</button-test
-        >
-        <span>Annually</span>
+        <v-btn-toggle rounded>
+          <shared-button @emit="changeContent('m')" value="left">
+            Monthly
+          </shared-button>
+          <shared-button @emit="changeContent('a')" value="center">
+            <span>Annually</span>
+          </shared-button>
+        </v-btn-toggle>
       </div>
 
       <div class="cards">
@@ -21,8 +24,8 @@
             <li>1,000's of Templates</li>
             <li>Blog Support Tools</li>
             <li>eCommerce Store</li>
-            <button-test bgColor="primary" class="mr-0"
-              >Start free trail</button-test
+            <shared-button bgColor="primary" class="mr-0"
+              >Start free trail</shared-button
             >
           </ul>
         </div>
@@ -39,13 +42,13 @@
             <li>1,000's of Templates</li>
             <li>Blog Support Tools</li>
             <li>eCommerce Store</li>
-            <button-test bgColor="primary">Subscribe now</button-test>
+            <shared-button bgColor="primary">Subscribe now</shared-button>
 
-            <button-test
+            <shared-button
               bg-color="#fff"
               btn-class="primary--text pr-8 pl-8"
               class="trail"
-              >Or Start 14 days trail</button-test
+              >Or Start 14 days trail</shared-button
             >
           </ul>
         </div>
@@ -55,11 +58,12 @@
 </template>
 
 <script>
-import ButtonTest from "../shared/SharedButton.vue";
+import SharedButton from "../shared/SharedButton.vue";
+import { OffertPlanning } from "@/enums/OffertPlanning.enum";
 
 export default {
   components: {
-    ButtonTest,
+    SharedButton,
   },
   data() {
     return {
@@ -68,9 +72,17 @@ export default {
     };
   },
   methods: {
-    changeContent() {
-      this.price = "$960";
-      this.month = "/year";
+    changeContent(type) {
+      if (this.price === "$99") {
+        this.price = "$960";
+      } else {
+        this.price = "$99";
+      }
+
+      this.month === "/month"
+        ? (this.month = "/year")
+        : (this.month = "/month");
+      console.log(type);
     },
   },
 };
@@ -82,7 +94,6 @@ export default {
 .row {
   align-items: center;
   margin: 0 auto;
-  height: 50vh;
   .toogle-box {
     margin: 0 auto;
   }
