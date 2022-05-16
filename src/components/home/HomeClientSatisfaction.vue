@@ -2,7 +2,48 @@
   <v-container
     ><v-row
       ><div class="section-client">
-        <div class="left-side"></div>
+        <div class="left-side">
+          <img
+            class="background-img"
+            src="@/assets/images/7_meet-client-satisfaction/Home-page341_06.png"
+            alt=""
+          />
+          <img
+            class="person-icons icon-1"
+            src="@/assets/images/7_meet-client-satisfaction/adam.png"
+            alt=""
+          />
+          <img
+            class="person-icons icon-2"
+            src="@/assets/images/7_meet-client-satisfaction/adam.png"
+            alt=""
+          />
+          <img
+            class="person-icons icon-3"
+            src="@/assets/images/7_meet-client-satisfaction/adam.png"
+            alt=""
+          />
+          <img
+            class="person-icons icon-4"
+            src="@/assets/images/7_meet-client-satisfaction/adam.png"
+            alt=""
+          />
+          <img
+            class="person-icons icon-5"
+            src="@/assets/images/7_meet-client-satisfaction/adam.png"
+            alt=""
+          />
+          <img
+            class="person-icons icon-6"
+            src="@/assets/images/7_meet-client-satisfaction/adam.png"
+            alt=""
+          />
+          <img
+            class="person-icons icon-7"
+            src="@/assets/images/7_meet-client-satisfaction/adam.png"
+            alt=""
+          />
+        </div>
         <div class="right-side">
           <h3>Meet Client Satisfaction</h3>
           <p>
@@ -11,18 +52,33 @@
           </p>
           <v-carousel hide-delimiters>
             <v-carousel-item v-for="(client, i) in clients" :key="i">
-              <span class="rates"></span>
-              <p class="header"></p>
-              <p class="description"></p>
+              <span class="rates">
+                <img
+                  src="@/assets/images/7_meet-client-satisfaction/star.png"
+                  alt="#"
+                  v-for="(rate, j) in maxRate"
+                  :key="j"
+                  :class="j < client.rate ? 'active' : ''"
+                />
+              </span>
+              <p class="header">{{ client.title }}</p>
+              <p class="description">{{ client.description }}</p>
               <div class="person-box">
-                <img src="" alt="" />
-                <p class="person-name"></p>
-                <p class="person-company"></p>
+                <img
+                  :src="
+                    require(`@/assets/images/7_meet-client-satisfaction/${client.user.photo}`)
+                  "
+                  alt=""
+                />
+                <p class="person-name">{{ client.user.name }}</p>
+                <p class="person-company">{{ client.user.company }}</p>
               </div>
             </v-carousel-item>
           </v-carousel>
-        </div></div></v-row
-  ></v-container>
+        </div>
+      </div></v-row
+    ></v-container
+  >
 </template>
 
 <script>
@@ -32,7 +88,65 @@ export default {
   data() {
     return {
       clients: Clients,
+      maxRate: 5,
     };
   },
 };
 </script>
+<style lang="scss" scoped>
+.section-client {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .left-side {
+    position: relative;
+    .background-img {
+      max-width: 100%;
+    }
+
+    .person-icons {
+      position: absolute;
+
+      &.icon-1 {
+        top: 10%;
+        left: 4%;
+      }
+      &.icon-2 {
+        top: 40%;
+        left: 10%;
+      }
+      &.icon-3 {
+        top: -3%;
+        left: 30%;
+      }
+      &.icon-4 {
+        top: 33%;
+        left: 35%;
+      }
+      &.icon-5 {
+        top: 72%;
+        left: 25%;
+      }
+      &.icon-6 {
+        top: 55%;
+        left: 55%;
+      }
+      &.icon-7 {
+        top: 5%;
+        left: 70%;
+      }
+    }
+  }
+  .right-side {
+    max-width: 50%;
+  }
+  .rates {
+    img {
+      opacity: 50%;
+      &.active {
+        opacity: 100%;
+      }
+    }
+  }
+}
+</style>
