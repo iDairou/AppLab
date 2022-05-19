@@ -73,7 +73,7 @@ export default {
       width: 25%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: flex-start;
 
       .box-icon-desc {
         h4 {

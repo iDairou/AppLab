@@ -127,9 +127,7 @@ export default {
         display: flex;
         flex-direction: column;
         width: 40%;
-        .box-icon__img {
-          margin: 500px;
-        }
+        align-items: flex-start;
       }
     }
   }

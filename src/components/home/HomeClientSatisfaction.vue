@@ -10,32 +10,32 @@
           />
           <img
             class="person-icons icon-1"
-            src="@/assets/images/7_meet-client-satisfaction/adam.png"
+            src="@/assets/images/7_meet-client-satisfaction/person-1.png"
             alt=""
           />
           <img
             class="person-icons icon-2"
-            src="@/assets/images/7_meet-client-satisfaction/adam.png"
+            src="@/assets/images/7_meet-client-satisfaction/person-2.png"
             alt=""
           />
           <img
             class="person-icons icon-3"
-            src="@/assets/images/7_meet-client-satisfaction/adam.png"
+            src="@/assets/images/7_meet-client-satisfaction/person-3.png"
             alt=""
           />
           <img
             class="person-icons icon-4"
-            src="@/assets/images/7_meet-client-satisfaction/adam.png"
+            src="@/assets/images/7_meet-client-satisfaction/person-4.png"
             alt=""
           />
           <img
             class="person-icons icon-5"
-            src="@/assets/images/7_meet-client-satisfaction/adam.png"
+            src="@/assets/images/7_meet-client-satisfaction/person-5.png"
             alt=""
           />
           <img
             class="person-icons icon-6"
-            src="@/assets/images/7_meet-client-satisfaction/adam.png"
+            src="@/assets/images/7_meet-client-satisfaction/jan.png"
             alt=""
           />
           <img
@@ -45,10 +45,13 @@
           />
         </div>
         <div class="right-side">
-          <h3>Meet Client Satisfaction</h3>
-          <p>
-            The rise of mobile devices transforms the way we consume elevant
-            channels such as facebook
+          <h3>
+            Meet Client Satisfaction <br />
+            by using product
+          </h3>
+          <p class="desc">
+            The rise of mobile devices transforms the way we consume <br />
+            elevant channels such as facebook
           </p>
           <v-carousel hide-delimiters>
             <v-carousel-item v-for="(client, i) in clients" :key="i">
@@ -93,7 +96,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .section-client {
   display: flex;
   align-items: center;
@@ -137,12 +140,25 @@ export default {
       }
     }
   }
+  .v-btn {
+    width: 30px !important;
+    height: 30px !important;
+  }
   .right-side {
     max-width: 50%;
+    h3 {
+      font-size: 35px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .desc {
+      font-size: 15px;
+    }
   }
   .rates {
     img {
-      opacity: 50%;
+      opacity: 40%;
+      margin-bottom: 10px;
       &.active {
         opacity: 100%;
       }

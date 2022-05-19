@@ -5,6 +5,7 @@
     <home-features></home-features>
     <home-choose-app></home-choose-app>
     <home-client-satisfaction></home-client-satisfaction>
+    <home-questions></home-questions>
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import TheNavbar from "../components/TheNavbar.vue";
 import HomeFeatures from "../components/home/HomeFeatures.vue";
 import HomeChooseApp from "../components/home/HomeChooseApp.vue";
 import HomeClientSatisfaction from "../components/home/HomeClientSatisfaction.vue";
+import HomeQuestions from "../components/home/HomeQuestions.vue";
 
 export default Vue.extend({
   name: "HomeView",
@@ -25,6 +27,7 @@ export default Vue.extend({
     HomeFeatures,
     HomeChooseApp,
     HomeClientSatisfaction,
+    HomeQuestions,
   },
 });
 </script>
