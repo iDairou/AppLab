@@ -7,6 +7,7 @@
     <home-client-satisfaction></home-client-satisfaction>
     <home-questions></home-questions>
     <home-download></home-download>
+    <the-footer></the-footer>
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import HomeChooseApp from "../components/home/HomeChooseApp.vue";
 import HomeClientSatisfaction from "../components/home/HomeClientSatisfaction.vue";
 import HomeQuestions from "../components/home/HomeQuestions.vue";
 import HomeDownload from "../components/home/HomeDownload.vue";
+import TheFooter from "../components/TheFooter.vue";
 
 export default Vue.extend({
   name: "HomeView",
@@ -31,6 +33,7 @@ export default Vue.extend({
     HomeClientSatisfaction,
     HomeQuestions,
     HomeDownload,
+    TheFooter,
   },
 });
 </script>
