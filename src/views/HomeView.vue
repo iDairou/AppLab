@@ -6,6 +6,7 @@
     <home-choose-app></home-choose-app>
     <home-client-satisfaction></home-client-satisfaction>
     <home-questions></home-questions>
+    <home-download></home-download>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import HomeFeatures from "../components/home/HomeFeatures.vue";
 import HomeChooseApp from "../components/home/HomeChooseApp.vue";
 import HomeClientSatisfaction from "../components/home/HomeClientSatisfaction.vue";
 import HomeQuestions from "../components/home/HomeQuestions.vue";
+import HomeDownload from "../components/home/HomeDownload.vue";
 
 export default Vue.extend({
   name: "HomeView",
@@ -28,6 +30,7 @@ export default Vue.extend({
     HomeChooseApp,
     HomeClientSatisfaction,
     HomeQuestions,
+    HomeDownload,
   },
 });
 </script>

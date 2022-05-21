@@ -41,6 +41,14 @@ export default {
       &::after {
         position: static;
       }
+      .v-expansion-panel-header {
+        font-weight: bold;
+      }
+      .v-expansion-panel-content {
+        font-size: 12px;
+        margin: 0px 20px 25px 0px;
+        padding: 0;
+      }
     }
   }
 }
