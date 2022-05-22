@@ -101,6 +101,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 100px;
+
   .left-side {
     position: relative;
     .background-img {

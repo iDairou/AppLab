@@ -31,7 +31,6 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
-  min-height: 450px;
   border-top: 2px solid #f4f4f4;
   margin-top: 100px;
   .row {

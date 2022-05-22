@@ -56,7 +56,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .smart-box {
   width: 1100px;
   margin: 0 auto;
@@ -74,14 +74,8 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-
-      .box-icon-desc {
-        h4 {
-          margin-bottom: 10px;
-        }
-      }
       .box-icon__img {
-        align-self: start;
+        margin-bottom: 20px;
       }
     }
   }

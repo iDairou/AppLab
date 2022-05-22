@@ -3,13 +3,18 @@
     ><v-row>
       <div class="choose-app-box">
         <div class="box-desc">
-          <div class="header-box">
-            <h3>Awesome app <br />features</h3>
+          <!-- <h3>Awesome app <br />features</h3>
             <p class="desc">
               Increase productivity with a simple to-do app. App for managing
               your personal budgets.
-            </p>
-          </div>
+            </p> -->
+          <shared-header
+            >Awesome app <br />features
+            <template v-slot:description>
+              Increase productivity with a simple to-do app. App for managing
+              your personal budgets.</template
+            >
+          </shared-header>
 
           <div class="boxes">
             <shared-icon-box
@@ -73,11 +78,13 @@
 <script>
 import SharedIconBox from "../shared/SharedIconBox.vue";
 import ButtonTest from "../shared/SharedButton.vue";
+import SharedHeader from "../shared/SharedHeader.vue";
 
 export default {
   components: {
     SharedIconBox,
     ButtonTest,
+    SharedHeader,
   },
 };
 </script>

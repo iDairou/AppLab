@@ -2,12 +2,19 @@
   <v-container
     ><v-row>
       <div class="text-content">
-        <h2>Why you should choose our app</h2>
+        <!-- <h2>Why you should choose our app</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid sed
           dignissimos impedit quos hic delectus eligendi voluptatem tenetur,
           doloremque ea! Fugit saepe reiciendis.
-        </p>
+        </p> -->
+        <shared-header
+          >Why you should choose our app<template v-slot:description>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
+            sed dignissimos impedit quos hic delectus eligendi voluptatem
+            tenetur, doloremque ea! Fugit saepe reiciendis.</template
+          ></shared-header
+        >
       </div>
       <div class="box-content">
         <shared-icon-box
@@ -77,10 +84,12 @@
 
 <script>
 import SharedIconBox from "../shared/SharedIconBox.vue";
+import SharedHeader from "../shared/SharedHeader.vue";
 
 export default {
   components: {
     SharedIconBox,
+    SharedHeader,
   },
 };
 </script>
@@ -97,12 +106,6 @@ export default {
     .text-content {
       width: 50%;
       margin: 0 auto;
-      h2 {
-        font-size: 35px;
-      }
-      p {
-        font-size: 13px;
-      }
     }
     .box-content {
       width: 100%;

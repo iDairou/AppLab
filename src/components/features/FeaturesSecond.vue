@@ -10,11 +10,19 @@
           />
         </div>
         <div class="box-desc">
-          <h3>Awesome app <br />features</h3>
+          <!-- <h3>Awesome app <br />features</h3>
           <p class="desc">
             Increase productivity with a simple to-do app. App for managing your
             personal budgets.
-          </p>
+          </p> -->
+          <shared-header
+            >Awesome apps <br />
+            features
+            <template v-slot:description>
+              Increase productivity with a simple to-do app. App for managing
+              your personal budgets.</template
+            >
+          </shared-header>
           <shared-icon-box
             img="2_awesome-apps-features/logo_03.png"
           ></shared-icon-box>
@@ -45,10 +53,12 @@
 
 <script>
 import SharedIconBox from "../shared/SharedIconBox.vue";
+import SharedHeader from "../shared/SharedHeader.vue";
 
 export default {
   components: {
     SharedIconBox,
+    SharedHeader,
   },
 };
 </script>
@@ -76,14 +86,6 @@ export default {
   }
 
   .box-desc {
-    h3 {
-      font-size: 30px;
-      margin-bottom: 5px;
-      line-height: 1.2;
-    }
-    .desc {
-      margin-bottom: 80px;
-    }
     .box-icon {
       display: flex;
       align-items: center;
