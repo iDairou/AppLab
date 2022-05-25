@@ -24,6 +24,6 @@ export default {
 
 <style scoped>
 .border {
-  border-bottom: 1px solid #f4f4f4;
+  border-bottom: 2px solid #f4f4f4;
 }
 </style>

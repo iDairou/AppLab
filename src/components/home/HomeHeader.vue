@@ -1,5 +1,9 @@
 <template>
   <section class="header">
+    <span class="figure circle"></span>
+    <span class="figure square"></span>
+    <span class="figure circle"></span>
+    <span class="figure circle"></span>
     <v-container>
       <v-row>
         <div class="col-6">
@@ -49,6 +53,7 @@ export default {
 @import "@/styles/mixins";
 
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,6 +61,24 @@ export default {
   background-position: center bottom;
   background-image: url("/src/assets/images/1_header/header-background.png");
   background-size: contain;
+
+  .figure {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+  }
+  .circle {
+    border: 4px solid #d4cdfd;
+    border-radius: 50%;
+    top: 10%;
+    left: 20%;
+  }
+  .square {
+    border: 3px solid #d5cefd;
+    top: 25%;
+    left: 35%;
+    transform: rotate(45deg);
+  }
 }
 
 .container {
@@ -102,4 +125,6 @@ export default {
     }
   }
 }
+
+// background figures
 </style>

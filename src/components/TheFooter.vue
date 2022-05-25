@@ -12,10 +12,10 @@
         {{ link.name }}
       </v-btn>
       <div class="footer-icons">
-        <button>Facebook</button>
-        <button>Twitter</button>
-        <button>Social</button>
-        <button>Social</button>
+        <button><v-icon> mdi-facebook </v-icon></button>
+        <button><v-icon> mdi-twitter </v-icon></button>
+        <button><v-icon> mdi-slack </v-icon></button>
+        <button><v-icon> mdi-github </v-icon></button>
       </div>
       <v-col class="py-8 text-center white--text" cols="12">
         <small>
@@ -52,8 +52,15 @@ footer {
   }
   .v-btn {
     background: none;
-    margin: 10px;
+    margin: 20px;
     font-size: 12px;
+  }
+  .v-icon {
+    color: white;
+    opacity: 30%;
+    &:hover {
+      opacity: 100%;
+    }
   }
   .footer-icons {
     width: 100%;
