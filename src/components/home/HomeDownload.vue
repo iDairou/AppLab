@@ -1,5 +1,5 @@
 <template>
-  <div class="section-download">
+  <div id="download" class="section-download">
     <v-container
       ><v-row>
         <h3>Download our APP now!</h3>

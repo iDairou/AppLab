@@ -19,4 +19,7 @@ export default Vue.extend({
 </script>
 <style lang="scss">
 @import "styles/styles";
+body {
+  scroll-behavior: smooth;
+}
 </style>

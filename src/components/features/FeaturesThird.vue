@@ -97,6 +97,8 @@ export default {
     width: 1px;
     border: 1px solid #b9b9b8;
     margin: 0 80px 0 80px;
+    background: black;
+    opacity: 10%;
   }
 }
 </style>

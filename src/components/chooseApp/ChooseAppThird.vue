@@ -1,5 +1,5 @@
 <template>
-  <v-container
+  <v-container id="pricing"
     ><v-row>
       <div class="toogle-box">
         <v-btn-toggle rounded>

@@ -1,5 +1,5 @@
 <template>
-  <div class="border">
+  <div id="features" class="border">
     <features-first></features-first>
     <features-second></features-second>
     <features-third></features-third>

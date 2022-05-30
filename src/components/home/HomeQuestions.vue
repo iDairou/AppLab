@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center">
+  <v-row id="faq" justify="center">
     <v-expansion-panels accordion>
       <v-expansion-panel v-for="(question, i) in questions" :key="i">
         <v-expansion-panel-header>{{
@@ -30,6 +30,7 @@ export default {
   width: 100%;
   max-width: 950px;
   margin: 0 auto;
+  padding: 50px;
   .v-expansion-panels {
     .v-expansion-panel {
       background: #f5f7fa;

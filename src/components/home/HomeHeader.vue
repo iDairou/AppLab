@@ -1,9 +1,9 @@
 <template>
   <section class="header">
-    <span class="figure circle"></span>
+    <span class="figure circle-1"></span>
     <span class="figure square"></span>
-    <span class="figure circle"></span>
-    <span class="figure circle"></span>
+    <span class="figure circle-2"></span>
+    <span class="figure circle-2-2"></span>
     <v-container>
       <v-row>
         <div class="col-6">
@@ -66,16 +66,32 @@ export default {
     height: 20px;
     width: 20px;
     position: absolute;
+    z-index: 0;
   }
-  .circle {
+  .circle-1 {
     border: 4px solid #d4cdfd;
     border-radius: 50%;
     top: 10%;
     left: 20%;
   }
+  .circle-2,
+  .circle-2-2 {
+    border: 4px solid transparent;
+    border-radius: 50px;
+    background-image: linear-gradient(white, white),
+      linear-gradient(to bottom, #ff636e, #f98d6c);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    top: 2%;
+    left: 64%;
+  }
+  .circle-2-2 {
+    top: 89%;
+    left: 22%;
+  }
   .square {
     border: 3px solid #d5cefd;
-    top: 25%;
+    top: 22%;
     left: 35%;
     transform: rotate(45deg);
   }
@@ -85,6 +101,7 @@ export default {
   width: 100%;
   max-width: 1070px;
   margin: auto;
+  z-index: 1;
 
   .row {
     justify-content: space-between;
@@ -125,6 +142,4 @@ export default {
     }
   }
 }
-
-// background figures
 </style>

@@ -1,20 +1,18 @@
 <template>
   <v-app-bar>
-    <div class="position-container">
-      <v-toolbar flat app max-height="150"
-        ><v-toolbar-title class="font-weight-bold">
-          <span class="app-color">App</span><span>Lab</span>
-        </v-toolbar-title>
-        <v-spacer></v-spacer>
-        <ul class="nav-items">
-          <a href="#">Home</a>
-          <a href="#">Key Features</a>
-          <a href="#">Pricing</a>
-          <a href="#">Testiminial</a>
-          <a href="#">FAQ</a>
-          <button-test bg-color="primary"></button-test>
-        </ul>
-      </v-toolbar></div
+    <v-toolbar flat app max-height="150"
+      ><v-toolbar-title class="font-weight-bold">
+        <span class="app-color">App</span><span>Lab</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <ul class="nav-items">
+        <a href="#">Home</a>
+        <a href="#features">Key Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#client-satisfaction">Testiminial</a>
+        <a href="#faq">FAQ</a>
+        <button-test bg-color="primary"></button-test>
+      </ul> </v-toolbar
   ></v-app-bar>
 </template>
 
@@ -30,12 +28,12 @@ export default {
 
 <style lang="scss">
 @import "@/styles/variables";
-.position-container {
-  width: 100%;
-  position: fixed;
-  z-index: 1000;
-  padding: 30px;
-  background-color: #fff;
+.v-sheet {
+  width: 100% !important;
+  background: #fff !important;
+  position: sticky !important;
+  z-index: 100;
+  top: 0;
 }
 .v-toolbar {
   width: 1171px;

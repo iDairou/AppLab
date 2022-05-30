@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="choose-app">
     <choose-app-first></choose-app-first>
     <choose-app-second></choose-app-second>
     <choose-app-third></choose-app-third>
