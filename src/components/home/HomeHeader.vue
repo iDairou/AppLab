@@ -106,6 +106,30 @@ export default {
   .row {
     justify-content: space-between;
     align-items: center;
+    .v-image {
+      @include for-size(phone) {
+        display: none !important;
+      }
+      @include for-size(tablet-portrait-up) {
+        display: block;
+      }
+    }
+    .col-6 {
+      @include for-size(phone) {
+        max-width: 100%;
+        flex: 0 0 100%;
+        position: relative;
+      }
+    }
+    .mr-4 {
+      @include for-size(tablet-landscape-up) {
+        margin: 1px !important;
+      }
+    }
+    .pl-8,
+    .pr-8 {
+      padding: 10px !important;
+    }
     .watch-demo:hover {
       color: #fff !important;
       background-color: $primary !important;
@@ -118,6 +142,12 @@ export default {
       background-color: #e2eaed;
       border-radius: 28px;
       padding: 5px 93px 5px 40px;
+      @include for-size(phone) {
+        font-size: 10px;
+      }
+      @include for-size(tablet-landscape-up) {
+        font-size: 9px;
+      }
 
       img {
         @include set-position(absolute, 50%, none, none, 0);
@@ -132,6 +162,10 @@ export default {
       color: $titleColor;
       margin-top: 15px;
       line-height: 1.25;
+      @include for-size(phone) {
+        font-size: 80px;
+        line-height: 1;
+      }
     }
 
     .lower-text {
@@ -139,6 +173,14 @@ export default {
       margin-top: 20px;
       color: $descColor;
       margin-bottom: 34px;
+      @include for-size(tablet-landscape-up) {
+        font-size: 15px;
+      }
+      @include for-size(tablet-portrait-up) {
+        font-size: 14px;
+        line-height: 1.3;
+        margin-bottom: 30px;
+      }
     }
   }
 }

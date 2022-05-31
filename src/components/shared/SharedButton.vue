@@ -24,20 +24,30 @@ export default {
 
 <style lang="scss">
 @import "@/styles/variables";
+@import "@/styles/mixins";
 
 .v-btn {
   &.default-btn {
-    font-size: 16px;
     min-width: 170px;
     height: 57px;
     background: #fff;
     color: $primary;
-    text-transform: none;
-    letter-spacing: 0px;
     transition: background-color 0.3s;
     margin-top: 18.5px;
     box-shadow: none;
     margin: 0;
+    @include for-size(tablet-landscape-up) {
+      height: 50px;
+      min-width: 120px;
+    }
+    span {
+      @include for-size(tablet-landscape-up) {
+        font-size: 12px;
+      }
+      @include for-size(tablet-portrait-up) {
+        font-size: 11px;
+      }
+    }
   }
 }
 </style>

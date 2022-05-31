@@ -38,6 +38,7 @@
 </template>
 
 <style scoped lang="scss">
+@import "@/styles/mixins";
 .container {
   height: 300px;
   h2 {
@@ -45,14 +46,33 @@
     width: 100%;
     text-align: center;
     margin: 80px 0 35px 0;
+    @include for-size(phone) {
+      margin: 50px 0 35px 0;
+    }
   }
 
   .companies-box {
-    width: 950px;
+    min-width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    img {
+      @include for-size(phone) {
+        margin: 10px;
+      }
+    }
+    @include for-size(phone) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include for-size(tablet-portrait-up) {
+      min-width: 100%;
+      flex-wrap: wrap;
+    }
+    @include for-size(tablet-landscape-up) {
+      min-width: 950px;
+    }
   }
 }
 </style>
